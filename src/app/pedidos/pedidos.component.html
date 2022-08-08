@@ -1,0 +1,37 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Pedidos</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de tus Pedidos</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Latitud</th>
+          <th>Longitud</th>
+          <th>Estado</th>
+          <th>Cantidad del Producto</th>
+          <th>Costo del Envío</th>
+          <th>Llegada aproximada</th>
+          <th>Producto</th> 
+          <th></th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedidos of pedidos">
+          <td>{{ pedidos.idPedido }}</td>
+          <td>{{ pedidos.latitud }}</td>
+          <td>{{ pedidos.longitud }}</td>
+          <td>{{ pedidos.estado }}</td>
+          <td>{{ pedidos.cantidadProducto }}</td>
+          <td>{{ pedidos.costoEnvio }}</td>
+          <td>{{ pedidos.llegada }}</td>
+          <td>{{ pedidos.nombreProducto }}</td>
+          <td>
+            <button type="button" name="Anular" (click)='cancelar(pedidos.idPedido)' class="btn btn-danger btn-sm">Quitar Pedido</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container mt-4" >
+  <h5 class="card-title">Listado de productos buscados por el nombre de una sucursal (Quito)</h5>
+  <div class="row" >
+          <div class="col-sm-4" *ngFor="let producto of prodXsucs">
+              <div class="form-group" >
+                  <div class="card" >
+                      <div class="card-header" >
+                          <label class="col-sm-12">{{producto.nombre}}</label>   
+                          <label><i class="fas fa-dollar-sign">${{producto.precio}}</i></label>                                 
+                      </div>
+                      <div class="card-body text-center d-flex">
+                          
+                          <img src="{{producto.imagen}}" alt="{{producto.nombre}}" width="200" height="170">
+                      </div>
+                      <div class="card-footer">
+                          <div class="col-sm-12">
+                              <label>{{producto.descripcion}}</label>                                   
+                          </div>
+                          <div class=" col-sm-12 text-center">                                
+                              <a href="" class="btn btn2 btn-outline-primary">Agregar a Carrito<i class="fas fa-cart-plus"></i></a>
+                              <a href="" class="btn btn-danger">Comprar</a>
+                          </div>                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </div>
+</div>

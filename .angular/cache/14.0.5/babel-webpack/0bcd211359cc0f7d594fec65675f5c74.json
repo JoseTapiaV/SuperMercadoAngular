@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class PagoTarjeta {\n  constructor() {\n    this.cliente = localStorage.getItem('ClienteID');\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

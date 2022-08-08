@@ -1,0 +1,30 @@
+<div class="container mt-4" >
+    <h5 class="card-title">Productos buscados por una categoría (Categoría: Frutas)</h5>
+    <div class="row" >
+            <div class="col-sm-4" *ngFor="let prodXcat of prodXcats">
+                <div class="form-group" >
+                    <div class="card" >
+                        <div class="card-header" >
+                            <label class="col-sm-12">{{prodXcat.nombre}}</label>   
+                            <label><i class="fas fa-dollar-sign">${{prodXcat.precio}}</i></label>                                 
+                        </div>
+                        <div class="card-body text-center d-flex">
+                            
+                            <img src="{{prodXcat.imagen}}" alt="{{prodXcat.nombre}}" width="200" height="170">
+                        </div>
+                        <div class="card-footer">
+                            <div class="col-sm-12">
+                                <label>{{prodXcat.descripcion}}</label>                                   
+                            </div>
+                            <div class=" col-sm-12 text-center">                                
+                                <a href="" class="btn btn2 btn-outline-primary">Agregar a Carrito<i class="fas fa-cart-plus"></i></a>
+                                <a href="" class="btn btn-danger">Comprar</a>
+                            </div>                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+  
+  
